@@ -66,10 +66,6 @@ def main():
         exclusive_orders=True
     )
 
-    output = bt.run()
-    print(output)
-    bt.plot()
-
     stats, heatmap = bt.optimize(
         long_term=range(3, MAX_LONG_TERM + 1, TERM_STEP),
         short_term=range(2, MAX_LONG_TERM, TERM_STEP),
@@ -88,7 +84,7 @@ def main():
     ax.set_title('移動平均期間の組み合わせによるSQN')
     ax.invert_yaxis()
     ax.grid()
-    plt.savefig('strategy3.png')
+    plt.savefig('strategy4.png')
     plt.show()
 
 
